@@ -29,3 +29,11 @@ STATIC_ROOT = BASE_DIR.child('staticfiles')
 
 MEDIAL_URL = '/media/'
 MEDIA_ROOT = BASE_DIR.child('media')
+
+#Configuración de email para correo electrónico
+#EMAIL SETTINGS
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com' # tipo de correo con el que se enviará
+EMAIL_HOST_USER = get_secret("EMAIL")
+EMAIL_HOST_PASSWORD = get_secret("PASS_EMAIL")
+EMAIL_PORT = 587 # Puerto de correos, normalemente en servidores ubuntú es 587
